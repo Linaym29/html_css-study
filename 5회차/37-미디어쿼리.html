@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>미디어 쿼리</title>
+    <style>
+      /* 미디어쿼리 속성
+        min-width :디스플레이 영역의 최소너비
+        max-width :디스플레이 영역의 최대너비
+        min-height :디스플레이 영역의 최소높이
+        max-height :디스플레이 영역의 최대높이
+
+        orientation : portrait 또는 landscape 감지
+        color : 기기의 색상당 비트 수
+        color-index : 출력 기기의 색상 테이블 수
+        aspect-ratio : 디스플레이 영역의 너비와 높이의 비율
+      */
+      div.box {
+        width: 150px;
+        height: 150px;
+        background-color: teal;
+      }
+
+      @media screen and (min-width: 800px) {
+        div.box {
+          background-color: orange;
+        }
+      }
+      @media screen and (min-width: 1000px) {
+        div.box {
+          background-color: red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

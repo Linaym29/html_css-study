@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input 외 입력 태그들</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>음료 주문</legend>
+      <h2>음료를 고르세요</h2>
+      <select name="" id="">
+        <!--select에 multiple 속성 추가시 중복 선택 가능 컨트롤버튼 누르고 선택-->
+        <option value="coffee">커피</option>
+        <option value="coke" selected>콜라</option>
+        <option value="juice">쥬스</option>
+        <option value="water">생수</option>
+      </select>
+
+      <h2>기타 음료를 원한다면 자유롭게 써주세요</h2>
+      <!--cols=가로(열) / rows=세로(행)-->
+      <textarea name="" id="" cols="30" rows="10"> </textarea>
+    </fieldset>
+    <h2>우리의 준비 상태는 아래와 같습니다!</h2>
+    <progress max="100" value="80"></progress>
+
+    <button>호출</button>
+    <input type="button" value="호출" />
+  </body>
+</html>

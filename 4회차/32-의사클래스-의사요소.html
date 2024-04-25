@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>의사 클래스 & 의사 요소</title>
+    <style>
+      /* 
+      자주 쓰이는 의사클래스
+      hover : 마우스 포인터가 요소에 올라가 있다.
+      active : 사용자가 요소를 활성화 했다. (예를 들면 마우스로 누르기와 같은)
+      focus : 요소가 포커스를 받고 있다. ex)아이디 입력 필드!
+      disabled : 비활성 상태의 요소이다.
+      nth-child() : 형제 사이에서의 순서에 따라 요소를 선택한다.
+      */
+      .menu {
+        padding: 10px;
+        border-bottom: 1px solid black;
+      }
+      .menu > li {
+        display: inline-block;
+        text-align: center;
+      }
+
+      li > a {
+        display: inline-block;
+        width: 80px;
+        padding: 10px;
+        text-decoration: none;
+      }
+      a:hover {
+        color: white;
+        background-color: gray;
+      }
+      a:active {
+        color: white;
+        background-color: black;
+      }
+      li:nth-child(n) {
+        font-size: 20px;
+      }
+      /* 2의 배수(짝수만)
+      li:nth-child(2n) {
+        font-size: 20px;
+      }
+      */
+      /* 홀수번째 만  
+      li:nth-child(2n-1) {
+        font-size: 20px;
+      } */
+
+      /* -자주 쓰이는 의사 요소---------------- */
+
+      /* after : 요소의 앞에 의사 요소를 생성 및 추가한다.
+      before : 요소의 뒤에 의사 요소를 생성 및 추가한다.
+      first-line : 블록 레벨 요소의 첫 번째 선에 스타일을 적용한다.
+      marker: 목록 기호의 스타일을 적용한다.
+      placeholder : 입력 요소의 플레이스홀더(자리표시자) 스타일을 적용한다. */
+
+      a::first-letter {
+        color: rgb(0, 0, 0);
+      }
+
+      a::after {
+        content: "보기";
+        color: rgb(136, 64, 236);
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="menu">
+      <li><a href="#">사전</a></li>
+      <li><a href="#">뉴스</a></li>
+      <li><a href="#">증권</a></li>
+      <li><a href="#">지도</a></li>
+    </ul>
+  </body>
+</html>

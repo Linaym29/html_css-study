@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>변형과 전환</title>
+    <style>
+      .parent {
+        display: inline-block;
+        margin: 0 20px;
+      }
+      .child {
+        width: 150px;
+        height: 150px;
+        background-color: teal;
+      }
+      /* .parent:nth-child(1) > .child {
+        transform: translate(30px, 50px);
+        background-color: tomato;
+      }
+      .parent:nth-child(2) > .child {
+        transform: scale(1.2, 0.8);
+        background-color: blue;
+      }
+      .parent:nth-child(3) > .child {
+        transform: skew(45deg);
+        background-color: palevioletred;
+      }
+      .parent:nth-child(4) > .child {
+        transform: rotate(85deg);
+      } */
+      .parent:nth-child(4) > .child:hover {
+        width: 300px;
+        height: 300px;
+        background-color: orange;
+        /* transition-property: width;
+        transition-duration: 5s;
+        transition-timing-function: ease-in;  한꺼번에 연결해서 쓸수 있음*/
+        transition: background-color 2s 0s linear, height 2s 0s linear;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+    변형과 transform 속성 
+    - translate(x,y) : 지정한 크기만큼 x,y축 방향으로 이동한다.
+    - scale(x,y) : 지정한 크기만큼 x,y축으로 확대 및 축소한다.
+    - skew(x,y) : 지정한 각도만큼 x,y축으로 비틀어 왜곡한다.
+    - rotate(deg) : 지정한 각도만큼 회전한다.
+  -->
+    <!--
+    transition 하위속성들
+    -property : 변화 대상 속성을 지정한다.
+    -duration : 변화가 실행될 시간을 지정한다.
+    -delay : 변화 시작 전 지연 시간을 지정한다.
+    -timing-function : 변화 실행 시 실행 곡선 방식을 지정한다.
+  -->
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+  </body>
+</html>
